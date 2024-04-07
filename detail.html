@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/detail.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <title>Project Detail</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <img src="./assets/image/db.png">
+                <ol><a href="./index.html">Home</a></ol>
+                <ol><a href="#">My Project</a></ol>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="./contact.html">Contact Me</a>
+        </div>
+    </nav>
+    <div id="project-detail">
+    </div>
+
+    <script>
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const options = { day: '2-digit', month: 'short', year: 'numeric' };
+            const formattedDate = date.toLocaleDateString('en-GB', options);
+
+            return formattedDate;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectName = urlParams.get('name');
+            const projectDescription = urlParams.get('description');
+            const projectImage = urlParams.get('image');
+            const projectStart = formatDate(urlParams.get('start'));
+            const projectEnd = formatDate(urlParams.get('end'));
+            const projectNode = urlParams.get('node');
+            const projectReact = urlParams.get('react');
+            const projectNext = urlParams.get('next');
+            const projectType = urlParams.get('typescript');
+
+            const projectDetail = document.getElementById("project-detail");
+
+            const projectData = {
+                next: projectNext,
+                node: projectNode,
+                react: projectReact,
+                typescript: projectType
+            };
+
+            const projectContainerHTML = `
+                <div class="head">
+                    <h1>${projectName}</h1>    
+                </div>
+                <div class="project-container">
+                    <div class="project-kiri">
+                        <img src="./assets/image/${projectImage}">
+                    </div>
+                    <div class="project-kanan">
+                        <div class="duration">
+                            <h4>Duration</h4>
+                            <p><i class="fa fa-calendar"></i> ${projectStart} - ${projectEnd}</p>
+                            <p><i class="fa fa-clock-o"></i> 1 Month</p>
+                        </div>
+                        <div class="technologies">
+                            <h4>Technologies</h4>
+                            <div class="tech">
+                                <div class="satu">
+                                    <div class="next">
+                                        ${projectNext ? `<div class="gambar"><img src="./assets/icon/next.png"></div>` : ''}
+                                        <div class="nama">
+                                            <p>${projectNext}</p>
+                                        </div>
+                                    </div>
+                                    <div class="node">
+                                        ${projectNode ? `<div class="gambar"><img src="./assets/icon/node.png"></div>` : ''}
+                                        <div class="nama">
+                                            <p>${projectNode}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dua">
+                                    <div class="react">
+                                        ${projectReact ? `<div class="gambar"><img src="./assets/icon/react.png"></div>` : ''}
+                                        <div class="nama">
+                                            <p>${projectReact}</p>
+                                        </div>
+                                    </div>
+                                    <div class="typescript">
+                                        ${projectType ? `<div class="gambar"><img src="./assets/icon/typescript.png"></div>` : ''}
+                                        <div class="nama">
+                                            <p>${projectType}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="desc">
+                    <p>${projectDescription}</p>
+                </div>
+            `;
+
+            projectDetail.innerHTML = projectContainerHTML;
+        });
+
+
+    </script>
+</body>
+</html>

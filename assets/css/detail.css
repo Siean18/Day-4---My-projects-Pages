@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(222, 222, 222);
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eeeeee;
+    padding: 0 40px;
+    margin-bottom: 10px;
+}
+
+nav .nav-left ul {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-right a{
+    text-decoration: none;
+    margin-top: 10px;
+    background-color: rgb(32, 32, 32);
+    border-radius: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav .nav-left a{
+    text-decoration: none;
+    color: black;
+}
+
+nav .nav-left ul ol .active{
+    color: rgb(77, 255, 0);
+}
+
+nav .nav-left ul img{
+    width: 8%;
+}
+
+
+#project-detail{
+    width: 800px;
+    margin: auto;
+}
+
+#project-detail h1{
+    text-align: center;
+}
+
+
+.project-container{
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 80px;
+}
+
+.project-kiri img{
+    width: 500px;
+}
+
+.project-kanan{
+    margin-left: 30px;
+}
+
+.next img{
+    width: 20px;
+}
+
+.typescript img{
+    width: 20px;
+}
+
+.next, .node, .react, .typescript{
+    display: flex;
+    align-items: center;
+}
+
+.tech{
+    display: flex;
+    justify-content: space-between;
+}
+
+.desc{
+    flex-wrap: wrap;
+    text-align: justify;
+}

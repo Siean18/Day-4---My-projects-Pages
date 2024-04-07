@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(222, 222, 222);
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.content{
+    margin: auto;
+    width: 400px;
+}
+
+.content h1{
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(91, 91, 91, 0.3);
+    margin-top: 5px;
+}
+
+option{
+    width: 100%;
+}
+
+select{
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    margin-top: 5px;
+    box-shadow: 0 10px 20px rgba(91, 91, 91, 0.3);
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    resize: none;
+    box-shadow: 0 10px 20px rgba(91, 91, 91, 0.3);
+}
+
+.name, .message, .email, .phone, .subject, .submit {
+    margin-top: 20px;
+    width: 100%;
+}
+
+button{
+    padding: 8px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    width: 80px;
+    float: right;
+    cursor: pointer;
+}

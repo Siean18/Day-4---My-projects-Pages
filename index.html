@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/custom.js"></script>
+    <title>Send Email</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <img src="./assets/image/db.png">
+                <ol><a href="./index.html">Home</a></ol>
+                <ol><a href="#">My Project</a></ol>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="./contact.html">Contact Me</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h1>ADD MY PROJECT</h1>
+        <div class="name">
+            <label for="name">Project Name</label>
+            <input type="text" id="name">
+        </div>
+        <div class="date">
+            <div class="start_date">
+                <label for="start_date">Start Date</label>
+                <input type="date" id="start">
+            </div>
+            <div class="end_date">
+                <label for="end_date">End Date</label>
+                <input type="date" id="end">
+            </div>
+        </div>
+        <div class="description">
+            <label for="description">description</label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        </div>
+        <div class="technologies">
+            <label for="technologies">Technologies</label>
+            <div class="tech">
+                <div class="tech-kiri">
+                    <div class="node_js">
+                        <input type="checkbox" name="node" id="node" value="Node Js">
+                        <label for="node">Node Js</label>
+                    </div>
+                    <div class="react_js">
+                        <input type="checkbox" name="react" id="react" value="React Js">
+                        <label for="node">React Js</label>
+                    </div>
+                </div>
+                <div class="tech-kanan">
+                    <div class="next_js">
+                        <input type="checkbox" name="next" id="next" value="Next Js">
+                        <label for="next">next Js</label>
+                    </div>
+                    <div class="typescript">
+                        <input type="checkbox" name="typescript" id="typescript" value="typescript">
+                        <label for="typescript">typescript</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image">
+            <label for="image">Upload Image</label>
+            <input type="file" name="image" id="image">
+        </div>
+        <div class="submit">
+            <button onclick="submitHandler()">Submit</button>
+        </div>
+    </div>
+    <div class="bottom-content">
+        <div class="head-bottom-content">
+            <h1>MY PROJECT</h1>
+        </div>
+        <div class="body-bottom-content">
+            <div class="card-content">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
